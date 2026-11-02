@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Class 12 Biology – Practice Board MCQs</title>
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --bg: #fff;
+  --fg: #1c1c1e;
+  --mut: #6b7280;
+  --card: #f3f5f9;
+  --acc: #1a3a5c;
+  --btn: #1a3a5c;
+  --btnfg: #fff;
+  --ok: #2e7d32;
+  --okbg: #e3f4e5;
+  --bd: #d9dee7;
+  --tag: #e0e7ff;
+  --tagfg: #3730a3;
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #16181d;
+    --fg: #eceef2;
+    --mut: #9aa3b2;
+    --card: #22262e;
+    --acc: #8ab4f8;
+    --btn: #8ab4f8;
+    --btnfg: #10151d;
+    --ok: #7bd88a;
+    --okbg: #1f3a27;
+    --bd: #363c48;
+    --tag: #2a334f;
+    --tagfg: #adc6ff;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.45;
+  padding: 0 14px 40px;
+  max-width: 760px;
+  width: 100%;
+  overflow-x: hidden;
+}
+h1 { font-size: 1.25rem; color: var(--acc); margin: 16px 0 2px; }
+.sub { color: var(--mut); font-size: 0.85rem; margin-bottom: 12px; }
+.bar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  background: var(--bg);
+  padding: 10px 0;
+  z-index: 5;
+  border-bottom: 1px solid var(--bd);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+select {
+  font: inherit;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--bd);
+  background: var(--card);
+  color: var(--fg);
+  outline: none;
+}
+button {
+  font: inherit;
+  border: 0;
+  border-radius: 8px;
+  background: var(--btn);
+  color: var(--btnfg);
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.sm { font-size: 0.85rem; padding: 6px 12px; }
+a.nav-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--btnfg);
+  background: var(--acc);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-left: auto;
+}
+section { background: var(--card); border-radius: 12px; padding: 12px 14px; margin: 14px 0; }
+h2 { font-size: 1.05rem; color: var(--acc); margin: 0 0 10px; border-bottom: 1px dashed var(--bd); padding-bottom: 6px; }
+.q { margin: 14px 0; word-break: break-word; }
+.tag { font-size: 0.75rem; background: var(--tag); color: var(--tagfg); padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-left: 6px; display: inline-block; }
+.o { padding: 6px 10px; border-radius: 6px; margin: 3px 0; font-size: 0.95rem; width: 100%; text-align: left; }
+.show .o.c { background: var(--okbg); color: var(--ok); font-weight: 700; }
+.ans { display: none; color: var(--ok); font-weight: 700; font-size: 0.9rem; margin: 10px 0 6px; }
+.show .ans { display: block; }
+</style>
+</head>
+<body>
+
+<h1>Class 12 Biology – Practice Board MCQs</h1>
+<div class="sub">Maharashtra State Board · Complete Chapterwise Past Years MCQs</div>
+
+<div class="bar"> <label for="chSel" style="font-size:0.85rem; font-weight:600; color:var(--mut);">Chapter:</label>
+  <select id="chSel">
+    <option value="all">All Chapters</option>
+  </select>
+  <button id="all" class="sm">Show all answers</button>
+
+  <a href="quiz.html" class="nav-link">Take the Biology Quiz →</a>
+</div>
+
+<div id="app"></div>
+
+<script>
+var DATA = [
+  ["01. Reproduction in Lower and Higher Plants", [
+    ["Vegetative propagation takes place with the help of leaves in _____ plant. <span class=\"tag\">Oct '08</span>", ["Kalanchoe", "Oxalis", "Cynodon", "Dahlia"], 0],
+    ["The endosperm cells in an angiospermic plant has 18 chromosomes, the number of chromosomes in its root cells will be <span class=\"tag\">Mar '09</span>", ["12", "6", "18", "24"], 0],
+    ["In porogamy, the pollen tube enters into the ovule through <span class=\"tag\">Mar '09</span>", ["micropyle", "integument", "chalaza", "funicle"], 0],
+    ["Egg apparatus consists of <span class=\"tag\">Oct '09</span>", ["egg and antipodals", "egg and polar nuclei", "egg and synergids", "egg and secondary nucleus"], 2],
+    ["Synergids are <span class=\"tag\">Mar '10</span>", ["haploid", "triploid", "diploid", "tetraploid"], 0],
+    ["How many meiotic divisions are required for the formation of 100 seeds? <span class=\"tag\">Oct '13</span>", ["25", "50", "100", "125"], 3],
+    ["During fertilization, male gametes are carried by pollen tube. This is called <span class=\"tag\">Oct '13</span>", ["Syngamy", "Mesogamy", "Polygamy", "Siphonogamy"], 3],
+    ["For formation of 50 seeds, how many minimum meiotic divisions are necessary? <span class=\"tag\">Mar '14</span>", ["25", "50", "75", "63"], 3],
+    ["In bisexual flowers, maturation of gynoecium before androecium is known as <span class=\"tag\">Mar '14</span>", ["protandry", "protogyny", "gynandry", "dicliny"], 1],
+    ["If the number of chromosomes in an endosperm cell is 27, what will be the chromosome number in the definitive nucleus? <span class=\"tag\">Mar '15</span>", ["9", "18", "27", "36"], 1],
+    ["Lever mechanism of pollination is observed in <span class=\"tag\">Mar '15</span>", ["Salvia", "Butea", "Bougainvillea", "Jasmine"], 0],
+    ["The types of pollination exhibited by Vallisneria and Zea mays respectively are <span class=\"tag\">Oct '15</span>", ["Anemophily and Hydrophily", "Entomophily and Hydrophily", "Hydrophily and Anemophily", "Hydrophily and Entomophily"], 2],
+    ["How many meiotic divisions will be needed to produce 44 female gametophytes in angiosperms? <span class=\"tag\">Oct '15</span>", ["11", "22", "44", "66"], 2],
+    ["Endosperm of angiosperm is <span class=\"tag\">July '16</span>", ["haploid", "diploid", "triploid", "tetraploid"], 2],
+    ["A versatile anther is an adaptation for _____ type of pollination. <span class=\"tag\">July '18</span>", ["anemophilous", "entomophilous", "hydrophilous", "ornithophilous"], 0],
+    ["During double fertilization second male gamete fuses with <span class=\"tag\">Mar '19</span>", ["antipodal cell", "egg cell", "secondary nucleus", "synergids"], 2],
+    ["How many meiotic and mitotic divisions are required for the formation of male gametophyte from pollen mother cell? <span class=\"tag\">Mar '20, '22</span>", ["2 meiotic and 1 mitotic", "1 meiotic and 1 mitotic", "1 meiotic and 2 mitotic", "2 meiotic and 2 mitotic"], 2],
+    ["How many mitotic divisions take place during the formation of a female gametophyte from a functional megaspore? <span class=\"tag\">Mar '23</span>", ["One", "Two", "Three", "Four"], 2],
+    ["Which of the following types require pollinator but result is genetically similar to autogamy? <span class=\"tag\">Mar '24</span>", ["Geitonogamy", "Xenogamy", "Apogamy", "Cleistogamy"], 0],
+    ["In monocot embryo the protective sheath of plumule is called <span class=\"tag\">July '24</span>", ["perisperm", "scutellum", "coleorrhiza", "coleoptile"], 3],
+    ["A flower shows dull colour, strong fragrance and edible pollen grains. The type of pollination in such flowers is <span class=\"tag\">Feb '25</span>", ["Anemophily", "Chiropterophily", "Ornithophily", "Entomophily"], 1],
+    ["Which of the following substances protects pollen grains from chemicals? <span class=\"tag\">July '25</span>", ["Pectin", "Hemicellulose", "Cellulose", "Sporopollenin"], 3]
+  ]],
+  ["02. Reproduction in Lower and Higher Animals", [
+    ["The endometrium is a part of <span class=\"tag\">Mar '08</span>", ["Urinary bladder", "Uterus", "Ureter", "Urethra"], 1],
+    ["Mostly fertilization of ovum takes place at <span class=\"tag\">Mar '10</span>", ["isthmus of fallopian tube", "infundibulum of fallopian tube", "fundus of uterus", "ampulla of fallopian tube"], 3],
+    ["Chancre are the primary lesions caused by <span class=\"tag\">Mar '13</span>", ["Neisseria gonorrhoea", "Treponema pallidum", "Plasmodium vivax", "Salmonella typhi"], 1],
+    ["Pregnancy in second trimester is maintained by <span class=\"tag\">Mar '14</span>", ["LH (lutenising hormone)", "progesterone", "estrogen", "hCG (human chorionic gonadotropin)"], 1],
+    ["Gemmule formation takes place in <span class=\"tag\">Oct '14</span>", ["Hydra", "Spongilla", "Planaria", "Human being"], 1],
+    ["In which of the following haploid cells a whole genome in human being is present? <span class=\"tag\">Mar '15</span>", ["sperm", "somatic cell", "mature RBC", "primary spermatocyte"], 0],
+    ["The trophoblast cells in contact with embryonal knob are called <span class=\"tag\">Oct '15</span>", ["Inner mass cells", "Blastomere", "Amniogenic cells", "Cells of Rauber"], 3],
+    ["_____ contribute about 60% of the total volume of the semen. <span class=\"tag\">Mar '17</span>", ["Prostate glands", "Cowper's glands", "Seminal vesicles", "Bartholin's glands"], 2],
+    ["Abortion in the first trimester of pregnancy may occur due to lack of <span class=\"tag\">Mar '17</span>", ["aldosterone", "testosterone", "oestrogen", "progesterone"], 3],
+    ["The external layer of connective tissue sheath of human testis is <span class=\"tag\">July '17</span>", ["tunica vasculosa", "tunica vaginalis", "tunica granulosa", "tunica albuginea"], 3],
+    ["Which of the following is mesodermal in origin? <span class=\"tag\">Mar '18</span>", ["Retina", "Enamel of teeth", "Heart", "Liver"], 2],
+    ["Approximately how many eggs are produced by a normal healthy human female up to the age of 25 years if the age of menarche is 12 years <span class=\"tag\">July '19</span>", ["169", "416", "240", "100"], 0],
+    ["Identify the cell labelled 'A' in the T.S. of testis (Reference: Sertoli cell structure): <span class=\"tag\">Mar '20</span>", ["Leydig cell", "Basement membrane", "Sperm", "Sertoli cell"], 3],
+    ["Which of the following is a hormone releasing contraceptive? <span class=\"tag\">Mar '23</span>", ["Cu-T", "Cu-7", "Multiload-375", "LNG-20"], 3],
+    ["In absence of fertilisation, corpus luteum degenerates into <span class=\"tag\">Mar '24</span>", ["tunica albuginea", "membrana granulosa", "zona pellucida", "corpus albicans"], 3],
+    ["Which hormone stimulates release of milk from the mammary gland? <span class=\"tag\">Mar '24</span>", ["Prolactin", "Oestrogen", "Luteinizing hormone", "Oxytocin"], 3],
+    ["Spermatids get transformed into a functional spermatozoa by the process of <span class=\"tag\">July '24</span>", ["spermiogenesis", "spermatogenesis", "gametogenesis", "oogenesis"], 0],
+    ["Part of the sperm containing enzymes for penetration of corona radiata is <span class=\"tag\">Feb '25</span>", ["tail", "middle part", "neck", "head"], 3]
+  ]],
+  ["03. Inheritance and Variation", [
+    ["Which one of the following is an example of multiple alleles? <span class=\"tag\">Oct '13</span>", ["Height in pea plant", "Hair colour in cattle", "Petal colour in four o'clock plant", "Wing-size in Drosophila"], 3],
+    ["Which one of the following is true pleiotropic gene? <span class=\"tag\">Oct '14</span>", ["HbA", "HbS", "HbC", "HbF"], 1],
+    ["A cross used to verify the unknown genotype of F₁ hybrid is a _____ cross. <span class=\"tag\">Mar '15</span>", ["test", "back", "dihybrid", "monohybrid"], 0],
+    ["Appearance of new combinations in F2 generation in a dihybrid cross proves the law of <span class=\"tag\">Mar '15</span>", ["dominance", "segregation", "independent assortment", "purity of gametes"], 2],
+    ["Genotype of human blood group 'O' will be <span class=\"tag\">July '16</span>", ["IᴬIᴬ", "IᴬIᴮ", "ii", "Iᴬi"], 2],
+    ["The genotype of human blood group B is <span class=\"tag\">Mar '17</span>", ["IᴬIᴮ", "IᴮIᴮ or Iᴮi", "IᴬIᴬ", "ii"], 1],
+    ["The phenotypic ratio of incomplete dominance is <span class=\"tag\">Mar '18</span>", ["1:1", "3:1", "1:2:1", "9:3:3:1"], 2],
+    ["_____ shows haplo-diploid type of sex-determination. <span class=\"tag\">Mar '19</span>", ["Pigeon", "Honey bee", "Parrot", "Snake"], 1],
+    ["Genotype of blood group 'AB' in human is <span class=\"tag\">Mar '20</span>", ["IᴬIᴮ", "Iᴮi", "IᴬIᴬ", "ii"], 0],
+    ["Which of the following is most appropriate for thalassemia? <span class=\"tag\">Mar '20</span>", ["decrease of either beta (β) or alpha (α) globin chain of HbA", "decrease of alpha (α) cells of pancreas", "decrease of WBC count", "decrease of blood platelets"], 0],
+    ["Test tube baby technique is called <span class=\"tag\">Mar '20</span>", ["In-vitro fertilization", "In-situ fertilization", "In-vivo fertilization", "Artificial insemination"], 0],
+    ["Which of the following group shows ZW-ZZ type of sex determination? <span class=\"tag\">Mar '23</span>", ["Pigeon, Parrot, Sparrow", "Parrot, Bat, Fowl", "Bat, Fowl, Crow", "Sparrow, Fowl, Cat"], 0],
+    ["The synonymous term for centromere is <span class=\"tag\">July '24</span>", ["primary constriction", "telomere", "secondary constriction", "satellite"], 0],
+    ["The type of gene interaction deviating from Mendel's findings of 3:1 to 1:2 is <span class=\"tag\">July '25</span>", ["Incomplete dominance", "Codominance", "Multiple alleles", "Pleiotropy"], 3]
+  ]],
+  ["04. Molecular Basis of Inheritance", [
+    ["Longer free end of t-RNA has unpaired <span class=\"tag\">Mar '08</span>", ["GGA", "CCA", "UAG", "AUG"], 1],
+    ["In nucleotide, the nitrogen base is attached to carbon no. 1 of sugar by _____ bond. <span class=\"tag\">Mar '13</span>", ["glycosidic", "hydrogen", "phosphodiester", "phosphate"], 0],
+    ["If the codon on mRNA is AUG, the compatible anticodon on tRNA is <span class=\"tag\">Oct '15</span>", ["UAG", "UAC", "GUA", "AUC"], 1],
+    ["The number of purines in a segment of DNA molecule is 68. What will be the number of pyrimidines in this segment? <span class=\"tag\">Mar '16</span>", ["34", "43", "68", "86"], 2],
+    ["Which one of the following is a stop codon? <span class=\"tag\">Mar '16</span>", ["UAG", "UAC", "AUG", "UCA"], 0],
+    ["The number of adenine molecules in a given DNA segment is 25 and the number of cytosine molecules is 45, the total number of nucleotides in the segment is <span class=\"tag\">July '17</span>", ["70", "140", "90", "50"], 1],
+    ["Nucleoside is a nucleotide without <span class=\"tag\">Mar '18</span>", ["sugar", "nitrogen base", "hydrogen bond", "phosphate group"], 3],
+    ["In an octamer of the nucleosome, core DNA consist of _____ base pairs. <span class=\"tag\">July '18</span>", ["46", "146", "246", "346"], 1],
+    ["As the base sequence present on one strand of DNA decides the base sequence of other strand, this strand is considered as <span class=\"tag\">Mar '19</span>", ["Descending strand", "Leading strand", "Lagging strand", "Complementary strand"], 3],
+    ["Name the process by which all the three types of non-genetic RNAs are produced on DNA template. <span class=\"tag\">July '19</span>", ["Translation", "Transcription", "Termination", "Replication"], 1],
+    ["Linker-DNA, connecting two successive nucleosomes, consists of <span class=\"tag\">Mar '20</span>", ["146 base pairs", "200 base pairs", "160 base pairs", "54 base pairs"], 3],
+    ["During replication of DNA, the separated strands are prevented from recoiling by using <span class=\"tag\">Mar '22</span>", ["single strand binding protein", "reverse transcriptase", "endonuclease", "polymerase"], 0],
+    ["In lac operon the structural gene z codes for _____ enzyme. <span class=\"tag\">July '22</span>", ["β-galactosidase", "β-galactoside permease", "transacetylase", "RNA polymerase"], 0],
+    ["The sequence of nitrogenous bases on DNA molecule is ATCGA. Which of the following is the correct complementary sequence of nitrogenous bases on mRNA molecule? <span class=\"tag\">July '22</span>", ["TAGCT", "TAGCA", "UAGCU", "UACGU"], 2],
+    ["Histones are rich in <span class=\"tag\">Mar '23</span>", ["Lysine and Arginine", "Leucine and Methionine", "Serine and Leucine", "Phenylalanine and Lysine"], 0],
+    ["Which one of the following is not a part of lac operon? <span class=\"tag\">Mar '24</span>", ["Promoter", "Regulator", "Inducer", "Operator"], 2],
+    ["Protein digesting enzyme is <span class=\"tag\">July '24</span>", ["polymerase", "protease", "pectinase", "RNAase"], 1],
+    ["The number of base pairs present around a histone octamer of nucleosome is <span class=\"tag\">July '25</span>", ["200", "146", "54", "20"], 1],
+    ["Identify initiation codon of mRNA from the following. <span class=\"tag\">July '25</span>", ["UAA", "AUG", "UAG", "UGA"], 1]
+  ]],
+  ["05. Origin and Evolution", [
+    ["The phenomenon of industrial melanism demonstrates <span class=\"tag\">Oct '13</span>", ["natural selection", "induced mutations", "reproductive isolation", "geographical isolation"], 0],
+    ["The most common types of fossils are <span class=\"tag\">Mar '14</span>", ["moulds", "casts", "actual remains", "models"], 2],
+    ["Identify the type of isolation where the members of two populations have different mating behaviour which prevents interbreeding: <span class=\"tag\">Oct '14</span>", ["Seasonal isolation", "Ethological isolation", "Mechanical isolation", "Habitat isolation"], 1],
+    ["Which of the following is NOT an example of connecting link? <span class=\"tag\">Mar '15</span>", ["Archaeopteryx", "Ichthyostega", "Seymouria", "Biston betularia"], 3],
+    ["The connecting link between 'ape' and 'man' is <span class=\"tag\">Oct '15</span>", ["Dryopithecus", "Australopithecus", "Homo erectus", "Homo neanderthalensis"], 1],
+    ["Vermiform appendix is an example of _____ organ. <span class=\"tag\">July '16</span>", ["vestigial", "homologous", "sense", "analogous"], 0],
+    ["Overproduction is the principle of <span class=\"tag\">July '17</span>", ["Lamarckism", "Theory of organic evolution", "Panspermia theory", "Modern theory of evolution"], 1],
+    ["Transfer of gene between populations that differ genetically from one another is called <span class=\"tag\">Mar '18</span>", ["Gene mutation", "Gene flow", "Genetic drift", "Genetic recombination"], 1],
+    ["The origin of life on the earth is known as <span class=\"tag\">July '18</span>", ["autobiogenesis", "abiogenesis", "protobiogenesis", "organogenesis"], 2],
+    ["_____ represents connecting link between amphibians and reptiles. <span class=\"tag\">Mar '20</span>", ["Seymouria", "Archaeopteris", "Ichthyostegia", "Archaeopteryx"], 0],
+    ["Which event is represented by chromosomal aberrations (Reference: Inversion diagram)? <span class=\"tag\">Mar '22</span>", ["Deletion", "Duplication", "Inversion", "Translation"], 2],
+    ["Due to specific mating behaviour, the members of population do not mate in _____ type of isolation. <span class=\"tag\">July '22</span>", ["ecological", "seasonal", "ethological", "mechanical"], 2],
+    ["If members of two populations have differences in the structure of reproductive organs, then this type of isolation is called <span class=\"tag\">July '23</span>", ["ethological", "seasonal", "mechanical", "habitat"], 2],
+    ["Industrial melanism is one of the best examples of <span class=\"tag\">July '24</span>", ["geographical isolation", "natural selection", "reproductive isolation", "adaptive radiation"], 1],
+    ["In a bird population of newly formed volcanic island, a rare allele of a gene was noted to be much more prevalent than mainland. This is known as _____ effect <span class=\"tag\">Feb '25</span>", ["Founder", "Bohr", "Bottleneck", "Haldane"], 0],
+    ["Connecting link between amphibians and reptiles is <span class=\"tag\">July '25</span>", ["Archaeopteryx", "Australopithecus", "Seymouria", "Ichthyosaurus"], 2],
+    ["The cranial capacity of Neanderthal-man was _____ c.c. <span class=\"tag\">Feb '26</span>", ["650", "900", "1400", "1450"], 2]
+  ]],
+  ["06. Plant Water Relation", [
+    ["Cohesion theory of ascent of sap is based on <span class=\"tag\">Mar '09</span>", ["diameter of vessels", "physical forces between water molecules", "surface tension", "pressure of water in roots"], 1],
+    ["In fully opened stomata, guard cells are <span class=\"tag\">Mar '09</span>", ["Plasmolysed", "Shrunken", "Turgid", "Flaccid"], 2],
+    ["Plasmolysis occurs in a plant cell when the outer solution is <span class=\"tag\">Mar '10</span>", ["isotonic", "hypertonic", "hypotonic", "mesotonic"], 1],
+    ["Wilting in plant occurs due to increase in <span class=\"tag\">Mar '10</span>", ["photosynthesis", "photoperiodism", "transpiration", "osmosis"], 2],
+    ["The special hygroscopic tissue found in the aerial roots of some epiphytic plants is <span class=\"tag\">July '22</span>", ["velamen", "xylem", "endodermis", "epiblema"], 0],
+    ["Identify the INCORRECT statement. <span class=\"tag\">Mar '23</span>", ["In a flaccid cell, T.P. is zero", "In a turgid cell, DPD is zero", "In a fully turgid cell, TP = OP", "Water potential of pure water is negative"], 3],
+    ["Plants absorb _____ water. <span class=\"tag\">July '23</span>", ["gravitational", "capillary", "combined", "hygroscopic"], 1],
+    ["Value of root pressure is +1 to +2 bars which is enough to pump water to a height of <span class=\"tag\">July '24</span>", ["50-60 meters", "10-20 meters", "30-40 meters", "20-30 meters"], 1],
+    ["The small pores present on woody stem surface with bark and which carry out gaseous exchange are <span class=\"tag\">Feb '25</span>", ["stomata", "hydathode", "ventricle", "lenticels"], 3],
+    ["In plants, soluble food is always translocated in the form of <span class=\"tag\">Feb '26</span>", ["glucose", "starch", "sucrose", "fructose"], 2]
+  ]],
+  ["07. Plant Growth and Mineral Nutrition", [
+    ["A genetically dwarf pea plant can be converted into a tall pea plant by the use of <span class=\"tag\">Mar '08</span>", ["Cytokinins", "Auxins", "Abscissic acid", "Gibberellic acid"], 3],
+    ["Bakane disease in Rice is associated with the discovery of <span class=\"tag\">Mar '09</span>", ["Cytokinins", "Gibberellins", "Auxins", "Ethylene"], 1],
+    ["ABA is also known as <span class=\"tag\">Mar '09</span>", ["Anti-toxin", "Anti-virulent", "Anti-oxidants", "Anti-gibberellins"], 3],
+    ["2-4-Dichlorophenoxyacetic acid is a <span class=\"tag\">Sep '09</span>", ["Insecticide", "Herbicide", "Flowering hormone", "Rooting hormone"], 1],
+    ["Growth rate is maximum during <span class=\"tag\">Mar '10</span>", ["lag phase", "log phase", "senescence phase", "growth phase"], 1],
+    ["_____ hormone responsible for efflux of K+ ions from guard cells and act as antitranspirant. <span class=\"tag\">Mar '22</span>", ["Gibberellins", "Cytokinin", "Ethylene", "Abscisic acid"], 3],
+    ["Which of the following is the only gaseous plant growth regulator? <span class=\"tag\">Mar '23</span>", ["ABA", "Cytokinin", "Ethylene", "Gibberellin"], 2],
+    ["The primary precursor of Indole-3 Acetic acid is <span class=\"tag\">July '23</span>", ["Tryptophan", "Phenyl alanine", "Mevalonic acid", "Methionine"], 0],
+    ["Identify the growth hormone in plants which causes inhibitory effect. <span class=\"tag\">Mar '24</span>", ["Cytokinins", "Abscisic acid", "Gibberellin", "Ethylene"], 1],
+    ["In a plant, deficiency symptom called 'Die-back of shoots' was observed. This can be rectified by this element- <span class=\"tag\">Feb '25</span>", ["zinc", "sulphur", "iron", "copper"], 3],
+    ["A cell divides mitotically into two. Daughter cells divide and redivide repeatedly. Such growth is called <span class=\"tag\">Feb '26</span>", ["arithmetic growth", "geometric growth", "growth ratio", "qualitative growth"], 1]
+  ]],
+  ["08. Respiration and Circulation", [
+    ["Which is the correct order in which the proteins participate in clotting of blood? <span class=\"tag\">Mar '13</span>", ["Prothrombinase → Prothrombin → Thromboplastin → Thrombin", "Thromboplastin → Prothrombinase → Prothrombin → Thrombin", "Prothrombin → Thromboplastin → Thrombin → Prothrombinase", "Thrombin → Prothrombin → Thromboplastin → Prothrombinase"], 1],
+    ["Normal activities of the heart are regulated by <span class=\"tag\">Mar '15</span>", ["brain", "spinal cord", "modified cardiac muscles", "hormones"], 2],
+    ["Deposition of fatty substances in the lining of arteries results in <span class=\"tag\">Mar '16</span>", ["arteriosclerosis", "atherosclerosis", "hyperglycemia", "hypotension"], 1],
+    ["While playing cricket Raju faces problem of severe pain and heaviness in the chest. Pain spreads from neck, lower jaw, left arm to left shoulder. Identify disease. <span class=\"tag\">Mar '22</span>", ["Angina pectoris", "Typhoid", "Malaria", "Kidney failure"], 0],
+    ["In Hamburger's phenomenon, <span class=\"tag\">Mar '23</span>", ["Cl⁻ diffuse into WBCs", "Cl⁻ diffuse into RBCs", "Na⁺ diffuse into RBCs", "Na⁺ diffuse into WBCs"], 1],
+    ["Cardiac output of a person is 5400 ml and heart rate 72 per min. What will be his stroke volume? <span class=\"tag\">July '23</span>", ["65 ml", "74 ml", "75 ml", "78 ml"], 2],
+    ["Which of the following divides nasal cavity? <span class=\"tag\">Mar '24</span>", ["Hyaline cartilage", "Mesethmoid cartilage", "Ligamentum arteriosum", "Laryngopharynx"], 1],
+    ["_____ cellular fragments are formed from megakaryocytes. <span class=\"tag\">July '24</span>", ["Erythrocytes", "Leucocytes", "Thrombocytes", "Monocytes"], 2],
+    ["Which is the largest WBC among the following? <span class=\"tag\">Feb '26</span>", ["Eosinophil", "Monocyte", "Basophil", "Lymphocyte"], 1]
+  ]],
+  ["09. Control and Coordination", [
+    ["The nervous band connecting two cerebral hemisphere is <span class=\"tag\">Oct '09</span>", ["Cerebral peduncle", "Brain stem", "Vermis", "Corpus callosum"], 3],
+    ["Damage to which endocrine gland may result in water and electrolyte imbalance? <span class=\"tag\">Mar '13</span>", ["Thymus gland", "Thyroid gland", "Adrenal gland", "Parathyroid gland"], 2],
+    ["The catecholamines are secreted by <span class=\"tag\">Oct '13</span>", ["adrenal cortex", "adrenal medulla", "thymus", "pancreas"], 1],
+    ["Spinal cord and sympathetic ganglion of autonomous nervous system are connected by <span class=\"tag\">Mar '14</span>", ["ramus ventralis", "ramus communicans", "ramus dorsalis", "connective"], 1],
+    ["Identify histological diagram showing thyroid gland follicles: <span class=\"tag\">Oct '14</span>", ["T. S. of ovary", "T. S. of testis", "T. S. of vein", "T.S. of thyroid gland"], 3],
+    ["Which of the following hormones is responsible for regulating the blood sugar level in the human body? <span class=\"tag\">Oct '14</span>", ["Insulin", "Growth hormone", "Oxytocin", "Vasopressin"], 0],
+    ["Photoreceptor cells are present in <span class=\"tag\">July '16</span>", ["blind spot", "retina", "cochlea", "cornea"], 1],
+    ["Which of the following is a chemical transmitter in synapse of neurons? <span class=\"tag\">July '17</span>", ["cholesterol", "ATP", "cholinesterase", "acetylcholine"], 3],
+    ["_____ maintains basal metabolic rate. <span class=\"tag\">Mar '18</span>", ["Thyroxine", "ADH", "GH", "Oxytocin"], 0],
+    ["The transparent anterior portion of sclera of eye is called <span class=\"tag\">July '18</span>", ["iris", "lens", "ciliary body", "cornea"], 3],
+    ["_____ is a hormone that regulates amount of glucose (sugar) in the blood. <span class=\"tag\">July '18</span>", ["angiotensin", "insulin", "adrenaline", "erythropoietin"], 1],
+    ["Membrane bound receptors and hormones produce second messengers like <span class=\"tag\">Mar '19</span>", ["Renin", "IP3", "ANF", "GHRF"], 1],
+    ["Injury to _____ causes sudden death. <span class=\"tag\">Mar '20</span>", ["cerebrum", "pons varolii", "medulla oblongata", "diencephalon"], 2],
+    ["_____ layer is in close contact of CNS in human being. <span class=\"tag\">Mar '22</span>", ["Cranium", "Dura mater", "Arachnoid mater", "Pia mater"], 3],
+    ["Calcium and Phosphate ions are balanced between blood and other tissues by <span class=\"tag\">Mar '23</span>", ["Thymosin and Parathormone", "Calcitonin and Somatostatin", "Collip's hormone and Calcitonin", "Calcitonin and Thymosin"], 2],
+    ["The specific gravity of CSF is <span class=\"tag\">July '23</span>", ["1.005", "1.02", "1.502", "1.81"], 0],
+    ["Degeneration of dopamine producing neurons in the CNS causes <span class=\"tag\">July '24</span>", ["Alzheimer's disease", "Addison's disease", "Grave's disease", "Parkinson's disease"], 3],
+    ["Glucagon is secreted by _____ cells of pancreas. <span class=\"tag\">Feb '25</span>", ["PP", "alpha", "delta", "beta"], 1],
+    ["Which of the following is NOT a sensory nerve? <span class=\"tag\">July '25</span>", ["I", "II", "III", "VIII"], 2]
+  ]],
+  ["10. Human Health and Diseases", [
+    ["What will be the parents blood groups if the blood group of a child is AB? <span class=\"tag\">Mar '13</span>", ["A and O", "B and O", "AB and O", "A and AB"], 3],
+    ["Charas, hashish, ganja are obtained from <span class=\"tag\">Oct '13</span>", ["Papaver somniferum", "Erythroxylon coca", "Atropa belladonna", "Cannabis sativa"], 3],
+    ["Elephantiasis is caused by <span class=\"tag\">Oct '15</span>", ["Wuchereria bancrofti", "Plasmodium vivax", "Bedbug", "Elephant"], 0],
+    ["Erythroblastosis foetalis is caused when mother is <span class=\"tag\">Mar '16</span>", ["Rh-ve with antibody 'a'", "Rh-ve with antibody 'b'", "Rh-ve with antibody 'Rh'", "Rh+ve"], 2],
+    ["_____ is the infectious stage of Plasmodium. <span class=\"tag\">July '17</span>", ["Tropozoite", "Sporozoite", "Cryptozoite", "Metacercaria"], 1],
+    ["Cocaine alkaloid is obtained from _____ plant. <span class=\"tag\">July '18</span>", ["Marijuana", "Papaver somniferum", "Cannabis sativa", "Erythroxylon coca"], 3],
+    ["Cellular factors in innate immunity is provided by <span class=\"tag\">Mar '22</span>", ["phagocytes", "antibody", "T-lymphocyte", "B-lymphocyte"], 0],
+    ["The oral vaccine for prevention of typhoid recommended by WHO is <span class=\"tag\">July '22</span>", ["typhoid polysaccharide", "typhim Vi", "typherix", "Ty21a"], 3],
+    ["Perforins are secreted by <span class=\"tag\">July '23</span>", ["Helper T-cells", "Cytotoxic T-cells", "Suppressor T-cells", "Memory T-cells"], 1],
+    ["Which of the following is caused by unsterilized needle? <span class=\"tag\">Mar '24</span>", ["Elephantiasis", "AIDS", "Malaria", "Dengue"], 1],
+    ["The part of antibody which binds with the specific antigen to form antigen-antibody complex is <span class=\"tag\">July '25</span>", ["Paratopes", "Isotopes", "Epitopes", "Octamer"], 0],
+    ["The mature plasma cell produces antibodies at the rate of _____ molecules per second. <span class=\"tag\">Feb '26</span>", ["2000", "1000", "900", "300"], 0]
+  ]],
+  ["11. Enhancement of Food Production", [
+    ["A wheat variety resistant to hill bunt disease is <span class=\"tag\">Mar '13</span>", ["Pusa Shubhra", "Himgiri", "Pusa Gaurav", "Pusa Sawani"], 1],
+    ["The good milk producer Indian buffaloes are <span class=\"tag\">Mar '13</span>", ["Nagpuri, Murrah and Surati", "Mehsana, Gir and Sindhi", "Jersey, Holstein and Nili", "Murrah, Sahiwal and Brown Swiss"], 0],
+    ["During biogas production, microorganism used to bring about anaerobic digestion is <span class=\"tag\">Mar '13</span>", ["Lactobacillus", "Rhizopus", "Methanococcus", "Methanobacillus"], 3],
+    ["Rhizobium phaseoli fixes atmospheric nitrogen symbiotically in <span class=\"tag\">Mar '13</span>", ["pea", "bean", "jowar", "maize"], 1],
+    ["The micro-organism used in the production of acetic acid is <span class=\"tag\">Oct '13</span>", ["Sclerotinia libertiana", "Aspergillus niger", "Neurospora gossypii", "Acetobacter aceti"], 3],
+    ["Dead and dried cell mass of microbes having nutritive value is also known as <span class=\"tag\">Mar '14</span>", ["BGA (blue-green algae)", "SCP (single cell protein)", "STP (sewage treatment plant)", "VAM"], 1],
+    ["Wheat variety 'Atlas 66' is improved for <span class=\"tag\">Oct '14</span>", ["high proteins", "high carbohydrates", "high fats", "high vitamins"], 0],
+    ["Erythromycin is obtained from <span class=\"tag\">Oct '14</span>", ["Penicillium chrysogenum", "Streptomyces griseus", "Gibberella fujikuroi", "Streptomyces erythreus"], 3],
+    ["In _____, superior males of the one breed are mated with superior females of another breed. <span class=\"tag\">Mar '15</span>", ["out crossing", "cross breeding", "out breeding", "in breeding"], 1],
+    ["Trichoderma konigi is a source of _____ enzyme. <span class=\"tag\">Oct '15</span>", ["invertase", "lipase", "pectinase", "cellulase"], 3],
+    ["Mating of two closely related individuals within the same breed is called <span class=\"tag\">Mar '16</span>", ["in breeding", "out breeding", "out crossing", "cross breeding"], 0],
+    ["Alcoholic fermentation is brought about by <span class=\"tag\">Mar '16</span>", ["Pseudomonas", "Saccharomyces", "Trichoderma", "Streptomyces"], 1],
+    ["In Brassica (rapeseed, mustard) variety _____ is resistant to Aphids. <span class=\"tag\">Mar '17</span>", ["Pusa A-4", "Pusa Gaurav", "Pusa Sawani", "Pusa Shubra"], 1],
+    ["The antibiotic chloromycetin is obtained from <span class=\"tag\">Mar '17</span>", ["Aspergillus niger", "Rhizopus arrhizus", "Streptomyces griseus", "Streptomyces venezuelae"], 3],
+    ["The microbial source of vinegar is <span class=\"tag\">July '17</span>", ["Aspergillus niger", "Rhizopus arrhizus", "Acetobacter aceti", "Streptomyces venezuelae"], 2],
+    ["Brown rust of wheat is caused by <span class=\"tag\">Mar '18</span>", ["viruses", "aphids", "fungi", "bacteria"], 2],
+    ["_____ is an exotic breed of cow. <span class=\"tag\">Mar '18</span>", ["Gir", "Sindhi", "Sahiwal", "Jersey"], 3],
+    ["Identify free-living bacterial bio-fertilizer. <span class=\"tag\">July '18</span>", ["Rhizobium", "Azotobacter", "Nostoc", "Bacillus thuringiensis"], 1],
+    ["The large holes in Swiss cheese are developed due to the production of large amounts of <span class=\"tag\">July '22</span>", ["O₂", "CO₂", "N₂", "H₂"], 1],
+    ["Aspergillus niger is the microbial source of <span class=\"tag\">July '22</span>", ["Vitamin C", "Vitamin B2", "Vitamin B12", "Vitamin B6"], 0],
+    ["The pH of nutrient medium for plant tissue culture is in the range of <span class=\"tag\">Mar '23</span>", ["2 to 4.2", "5 to 5.8", "7 to 7.5", "8 to 9.5"], 1],
+    ["Hisardale is a new breed of sheep developed by crossing <span class=\"tag\">July '23</span>", ["Bikaneri ram and Marino ewe", "Bikaneri ram and Bikaneri ewe", "Merino ram and Bikaneri ewe", "Merino ewe and Bikaneri ram"], 2],
+    ["Which of the following biofertilizers is used by farmers to increase the yield of rice crop? <span class=\"tag\">July '25</span>", ["Azotobacter", "Azospirillum", "Bacillus", "Azolla"], 3],
+    ["Identify the alga among the following <span class=\"tag\">Feb '26</span>", ["Spirulina spp.", "Aspergillus niger", "Candida utilis", "Trichoderma viride"], 0]
+  ]],
+  ["12. Biotechnology", [
+    ["The enzyme affecting the shelf life of flavr savr tomato is <span class=\"tag\">Mar '13</span>", ["galactosidase", "transacetylase", "permease", "polygalacturonase"], 3],
+    ["The biological scissor is <span class=\"tag\">Mar '14</span>", ["restriction endonuclease", "gyrase", "DNA ligase", "helicase"], 0],
+    ["cDNA means <span class=\"tag\">Oct '14</span>", ["coiled DNA", "cytoplasmic DNA", "complementary DNA", "circular DNA"], 2],
+    ["_____ enzymes are used as biological scissors in r-DNA technology. <span class=\"tag\">Oct '15</span>", ["Restriction endonucleases", "DNA ligases", "DNA polymerases", "Reverse transcriptases"], 0],
+    ["'Cry' genes are present in <span class=\"tag\">July '16</span>", ["Agrobacterium tumefaciens", "Bacillus thuringiensis", "Rhizobium species", "Escherichia coli"], 1],
+    ["The _____ enzyme is used to cut DNA at specific point. <span class=\"tag\">Mar '17</span>", ["DNA polymerase", "Alkaline phosphatase", "restriction endonuclease", "DNA ligase"], 2],
+    ["The biological scissors of DNA are <span class=\"tag\">July '17</span>", ["ligases", "polymerases", "endonucleases", "transcriptases"], 2],
+    ["_____ is a soil bacterium which causes crown gall tumours in dicotyledonous plants. <span class=\"tag\">July '18</span>", ["Agrobacterium tumefaciens", "Bacillus thuringiensis", "Haemophilus influenzae", "Escherichia coli"], 0],
+    ["Annealing step of PCR, operates at _____ °C. <span class=\"tag\">Mar '22</span>", ["90-98", "40-60", "70-75", "100-120"], 1],
+    ["Which of the following sets of organisms are used as cloning organisms in plant biotechnology? <span class=\"tag\">July '22</span>", ["E.coli and Rhizobium", "E.coli and Agrobacterium tumefaciens", "Azotobacter and Rhizobium", "E.coli and Azotobacter"], 1],
+    ["If only one DNA molecule is subjected to PCR and time for each cycle is 3 mins, after 5 cycles, how many DNA molecules are obtained? <span class=\"tag\">July '23</span>", ["10", "15", "32", "64"], 2],
+    ["Recognition sequence of restriction enzymes are generally _____ nucleotides long. <span class=\"tag\">Mar '24</span>", ["2 to 4", "4 to 8", "8 to 10", "14 to 18"], 1],
+    ["Insect resistant property in cotton crop is developed by introducing a gene from <span class=\"tag\">Feb '25</span>", ["Bacillus thuringiensis", "Bacillus subtilis", "Bacillus polymyxa", "Escherichia coli"], 0],
+    ["Which genes are used for improvement of oil content and oil quality in plants? <span class=\"tag\">July '25</span>", ["Phytase gene", "Arabidopsis gene", "Holandric gene", "Oncogene"], 1],
+    ["The transgenic plant Tomato contains transgene _____ <span class=\"tag\">Feb '26</span>", ["Phytoene synthase", "Chalcone isomerase", "Ferritin", "Phytase"], 1]
+  ]],
+  ["13. Organisms and Populations", [
+    ["During _____ type of interaction, both organisms are benefited. <span class=\"tag\">Mar '15</span>", ["mutualism", "competition", "commensalism", "parasitism"], 0],
+    ["Struggle between cow and cow for getting grass is called <span class=\"tag\">Mar '16</span>", ["inter-specific struggle", "environmental struggle", "struggle against natural calamities", "intra-specific struggle"], 3],
+    ["Which day is observed as 'World Environment Day'? <span class=\"tag\">Mar '16</span>", ["21st May", "5th June", "25th September", "13th December"], 1],
+    ["Mutualism is <span class=\"tag\">July '18</span>", ["two organisms are benefitted from each other", "one organism is benefitted and other is harmed", "both are harmed from each other", "an association in which one is parasite and other is host"], 0],
+    ["Pick out the appropriate association representing brood parasitism. <span class=\"tag\">Mar '22</span>", ["Hermit crab and sea anemone", "Asian koel and common Indian crow", "Algae and fungi", "Buffalo and cattle egret"], 1],
+    ["The organisms having tolerance for a wide range of salinity are called <span class=\"tag\">July '23</span>", ["stenothermal", "euryhaline", "stenohaline", "eurythermal"], 1],
+    ["Identify the appropriate term for the number of births under ideal conditions: <span class=\"tag\">Mar '24</span>", ["Absolute mortality", "Realized natality", "Realized mortality", "Absolute natality"], 3],
+    ["Choose the correct name of phases A, B and C in logistic growth curve: <span class=\"tag\">July '24</span>", ["Stationary, Log, Lag", "Log, Lag, Stationary", "Log, Stationary, Lag", "Lag, Log, Stationary"], 3],
+    ["The type of interspecific interaction in which one species is harmed and other is not affected is termed as <span class=\"tag\">Feb '25</span>", ["commensalism", "parasitism", "amensalism", "mutualism"], 2],
+    ["Identify the type of association between orchid growing as an epiphyte on branch of mango tree: <span class=\"tag\">July '25</span>", ["Parasitism", "Amensalism", "Commensalism", "Mutualism"], 2],
+    ["The number of deaths when environmental pressures come into play is known as <span class=\"tag\">Feb '26</span>", ["absolute mortality", "absolute natality", "realized mortality", "realized natality"], 2]
+  ]],
+  ["14. Ecosystems and Energy Flow", [
+    ["The pattern of ecosystem in which density and distribution of species vary along a horizontal gradient is <span class=\"tag\">Mar '13</span>", ["zonation", "stratification", "ecological niche", "speciation"], 0],
+    ["Abundance of phosphate, causing algal overgrowth, resulting in depletion of oxygen and killing other aquatic life is known as <span class=\"tag\">Mar '14</span>", ["Ecological succession", "eutrophication", "guano deposits", "greenhouse effect"], 1],
+    ["The partially decomposed organic matter is formed by a process called <span class=\"tag\">Mar '15</span>", ["fragmentation", "humification", "mineralisation", "leaching"], 1],
+    ["Energy flow in ecosystem is <span class=\"tag\">July '16</span>", ["reverse", "unidirectional", "bidirectional", "multidirectional"], 1],
+    ["Breakdown of detritus into smaller particles is called <span class=\"tag\">Mar '17</span>", ["fragmentation", "leaching", "catabolism", "humification"], 0],
+    ["The process of formation of partially decomposed organic matter is called <span class=\"tag\">July '17</span>", ["fragmentation", "leaching", "catabolism", "humification"], 3],
+    ["In a food chain, the herbivores are represented by <span class=\"tag\">Mar '18</span>", ["producers", "primary consumers", "secondary consumers", "decomposers"], 1],
+    ["The energy enters the ecosystem through <span class=\"tag\">July '18</span>", ["consumers", "decomposers", "omnivores", "producers"], 3],
+    ["Detritus food chain starts from <span class=\"tag\">July '23</span>", ["producers", "dead organic matter", "parasite", "photosynthesis"], 1],
+    ["Which one of the following does not evolve further? <span class=\"tag\">Mar '24</span>", ["Climax community", "Primary succession", "Pioneer species", "Seral community"], 0],
+    ["In the given food chain (Plants → Deer → Lion), if plants absorb 1000 Joules of light energy, then how much energy is available for Lion? <span class=\"tag\">Feb '25</span>", ["10 Joules", "1000 Joules", "0.1 Joule", "100 Joules"], 0],
+    ["Identify the organism which meets their energy and nutrient requirements by degrading the detritus: <span class=\"tag\">Feb '26</span>", ["Omnivores", "Carnivores", "Autotrophs", "Saprotrophs"], 3]
+  ]],
+  ["15. Biodiversity, Conservation and Environmental Issues", [
+    ["In which device a fine spray of water is used for separation of ammonia and sulphur dioxide? <span class=\"tag\">Mar '13</span>", ["Scrubber", "Diesel engine", "Smokers", "Electrostatic precipitator"], 0],
+    ["The permanent removal of forests and woodlands is called <span class=\"tag\">Mar '14</span>", ["reforestation", "afforestation", "deforestation", "agroforestry"], 2],
+    ["The depletion of ozone layer is due to <span class=\"tag\">Oct '14</span>", ["CO₂", "CO", "CH₄", "CFCs"], 3],
+    ["Ozone depletion is occurring widely in the stratosphere, it leads to ozone hole caused mainly due to <span class=\"tag\">Mar '17</span>", ["ethylene", "CFCs", "methane", "CO₂"], 1],
+    ["Which of the following is mainly responsible for ozone depletion? <span class=\"tag\">July '17</span>", ["CFCs", "hydrocarbons", "carbon monoxide", "carbon dioxide"], 0],
+    ["Which of the following harmful radiation is absorbed by ozone layer of the stratosphere? <span class=\"tag\">Oct '18</span>", ["X-ray", "visible light", "Ultraviolet rays", "gamma rays"], 2],
+    ["Miyawaki is a method of plantation adopted by government for Harit Kranti from <span class=\"tag\">July '22</span>", ["Japan", "Bhutan", "China", "America"], 0],
+    ["Rivet Popper Hypothesis is an analogy to explain the significance of <span class=\"tag\">Mar '23</span>", ["Biodiversity", "natality", "sex-ratio", "age distribution ratio"], 0],
+    ["Observe the species-area relationship graph: Line 'A' represents _____ <span class=\"tag\">Mar '24</span>", ["S = C A^Z", "log C = log A + Z log S", "S = C A^Z", "log S = log Z + C log A"], 2],
+    ["Rivet Popper Hypothesis explains <span class=\"tag\">July '24</span>", ["loss of biodiversity", "biomagnification", "species area relationship", "significance of diversity"], 3],
+    ["The aquatic plant _____ is known as 'Terror of Bengal'. <span class=\"tag\">Feb '25</span>", ["Lotus", "Pistia", "Eichhornia", "Vallisneria"], 2],
+    ["Identify invasive plant species from the following: <span class=\"tag\">Feb '26</span>", ["Gloriosa", "Parthenium", "Sansevieria", "Michelia"], 1]
+  ]]
+];
+
+var L = "ABCD";
+var app = document.getElementById("app");
+var chSel = document.getElementById("chSel");
+var allBtn = document.getElementById("all");
+var secs = [];
+
+function getActiveData() {
+  return DATA;
+}
+
+function loadMcqMode() {
+  var data = getActiveData();
+  app.innerHTML = "";
+  chSel.innerHTML = '<option value="all">All Chapters</option>';
+  secs = [];
+
+  data.forEach(function(c, idx) {
+    var opt = document.createElement("option");
+    opt.value = idx;
+    opt.textContent = c[0];
+    chSel.appendChild(opt);
+
+    var s = document.createElement("section");
+    s.dataset.idx = idx;
+    
+    var h = "<h2>" + c[0] + "</h2>";
+    c[1].forEach(function(r, i) {
+      h += '<div class="q"><b>Q' + (i + 1) + '.</b> ' + r[0];
+      r[1].forEach(function(o, j) {
+        h += '<div class="o' + (j === r[2] ? " c" : "") + '">(' + L[j] + ') ' + o + '</div>';
+      });
+      h += '</div>';
+    });
+    
+    h += '<button class="sm">Show answers</button>';
+    
+    s.innerHTML = h;
+    app.appendChild(s);
+    secs.push(s);
+
+    var b = s.querySelector("button");
+    b.onclick = function() {
+      s.classList.toggle("show");
+      b.textContent = s.classList.contains("show") ? "Hide answers" : "Show answers";
+      syncAllBtn();
+    };
+  });
+
+  filterChapters();
+}
+
+function filterChapters() {
+  var val = chSel.value;
+  secs.forEach(function(s) {
+    if (val === "all" || s.dataset.idx === val) {
+      s.style.display = "block";
+    } else {
+      s.style.display = "none";
+    }
+  });
+  syncAllBtn();
+}
+
+chSel.onchange = function() {
+  filterChapters();
+};
+
+function syncAllBtn() {
+  var visibleSecs = secs.filter(function(s) { return s.style.display !== "none"; });
+  var shownSecs = visibleSecs.filter(function(s) { return s.classList.contains("show"); });
+  allBtn.textContent = (shownSecs.length === visibleSecs.length && visibleSecs.length > 0) ? "Hide all answers" : "Show all answers";
+}
+
+allBtn.onclick = function() {
+  var visibleSecs = secs.filter(function(s) { return s.style.display !== "none"; });
+  var shouldShow = visibleSecs.some(function(s) { return !s.classList.contains("show"); });
+  
+  visibleSecs.forEach(function(s) {
+    s.classList.toggle("show", shouldShow);
+    s.querySelector("button").textContent = shouldShow ? "Hide answers" : "Show answers";
+  });
+  syncAllBtn();
+};
+
+loadMcqMode();
+</script>
+
+</body>
+</html>
