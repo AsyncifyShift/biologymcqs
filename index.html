@@ -53,6 +53,7 @@ body {
   overflow-x: hidden;
 }
 h1 { font-size: 1.25rem; color: var(--acc); margin: 16px 0 2px; }
+  p{font-size:0.7rem;text-align:right;font-weight:600;}
 .sub { color: var(--mut); font-size: 0.85rem; margin-bottom: 12px; }
 .bar {
   position: sticky;
@@ -98,7 +99,7 @@ a.nav-link {
   margin-left: auto;
 }
 section { background: var(--card); border-radius: 12px; padding: 12px 14px; margin: 14px 0; }
-  p{font-size:0.8rem;border-bottom:1px solid black;text-align:right;}
+  
 h2 { font-size: 1.05rem; color: var(--acc); margin: 0 0 10px; border-bottom: 1px dashed var(--bd); padding-bottom: 6px; }
 .q { margin: 14px 0; word-break: break-word; }
 .tag { font-size: 0.75rem; background: var(--tag); color: var(--tagfg); padding: 2px 6px; border-radius: 4px; font-weight: 600; margin-left: 6px; display: inline-block; }
@@ -208,61 +209,61 @@ var DATA = [
     ["The number of base pairs present around a histone octamer of nucleosome is <span class=\"tag\">July '25</span>", ["200", "146", "54", "20"], 1],
     ["Identify initiation codon of mRNA from the following. <span class=\"tag\">July '25</span>", ["UAA", "AUG", "UAG", "UGA"], 1]
   ]],
-  // ["05. Origin and Evolution", [
-  //   ["The phenomenon of industrial melanism demonstrates <span class=\"tag\">Oct '13</span>", ["natural selection", "induced mutations", "reproductive isolation", "geographical isolation"], 0],
-  //   ["The most common types of fossils are <span class=\"tag\">Mar '14</span>", ["moulds", "casts", "actual remains", "models"], 2],
-  //   ["Identify the type of isolation where the members of two populations have different mating behaviour which prevents interbreeding: <span class=\"tag\">Oct '14</span>", ["Seasonal isolation", "Ethological isolation", "Mechanical isolation", "Habitat isolation"], 1],
-  //   ["Which of the following is NOT an example of connecting link? <span class=\"tag\">Mar '15</span>", ["Archaeopteryx", "Ichthyostega", "Seymouria", "Biston betularia"], 3],
-  //   ["The connecting link between 'ape' and 'man' is <span class=\"tag\">Oct '15</span>", ["Dryopithecus", "Australopithecus", "Homo erectus", "Homo neanderthalensis"], 1],
-  //   ["Vermiform appendix is an example of _____ organ. <span class=\"tag\">July '16</span>", ["vestigial", "homologous", "sense", "analogous"], 0],
-  //   ["Overproduction is the principle of <span class=\"tag\">July '17</span>", ["Lamarckism", "Theory of organic evolution", "Panspermia theory", "Modern theory of evolution"], 1],
-  //   ["Transfer of gene between populations that differ genetically from one another is called <span class=\"tag\">Mar '18</span>", ["Gene mutation", "Gene flow", "Genetic drift", "Genetic recombination"], 1],
-  //   ["The origin of life on the earth is known as <span class=\"tag\">July '18</span>", ["autobiogenesis", "abiogenesis", "protobiogenesis", "organogenesis"], 2],
-  //   ["_____ represents connecting link between amphibians and reptiles. <span class=\"tag\">Mar '20</span>", ["Seymouria", "Archaeopteris", "Ichthyostegia", "Archaeopteryx"], 0],
-  //   ["Which event is represented by chromosomal aberrations (Reference: Inversion diagram)? <span class=\"tag\">Mar '22</span>", ["Deletion", "Duplication", "Inversion", "Translation"], 2],
-  //   ["Due to specific mating behaviour, the members of population do not mate in _____ type of isolation. <span class=\"tag\">July '22</span>", ["ecological", "seasonal", "ethological", "mechanical"], 2],
-  //   ["If members of two populations have differences in the structure of reproductive organs, then this type of isolation is called <span class=\"tag\">July '23</span>", ["ethological", "seasonal", "mechanical", "habitat"], 2],
-  //   ["Industrial melanism is one of the best examples of <span class=\"tag\">July '24</span>", ["geographical isolation", "natural selection", "reproductive isolation", "adaptive radiation"], 1],
-  //   ["In a bird population of newly formed volcanic island, a rare allele of a gene was noted to be much more prevalent than mainland. This is known as _____ effect <span class=\"tag\">Feb '25</span>", ["Founder", "Bohr", "Bottleneck", "Haldane"], 0],
-  //   ["Connecting link between amphibians and reptiles is <span class=\"tag\">July '25</span>", ["Archaeopteryx", "Australopithecus", "Seymouria", "Ichthyosaurus"], 2],
-  //   ["The cranial capacity of Neanderthal-man was _____ c.c. <span class=\"tag\">Feb '26</span>", ["650", "900", "1400", "1450"], 2]
-  // ]],
-  // ["06. Plant Water Relation", [
-  //   ["Cohesion theory of ascent of sap is based on <span class=\"tag\">Mar '09</span>", ["diameter of vessels", "physical forces between water molecules", "surface tension", "pressure of water in roots"], 1],
-  //   ["In fully opened stomata, guard cells are <span class=\"tag\">Mar '09</span>", ["Plasmolysed", "Shrunken", "Turgid", "Flaccid"], 2],
-  //   ["Plasmolysis occurs in a plant cell when the outer solution is <span class=\"tag\">Mar '10</span>", ["isotonic", "hypertonic", "hypotonic", "mesotonic"], 1],
-  //   ["Wilting in plant occurs due to increase in <span class=\"tag\">Mar '10</span>", ["photosynthesis", "photoperiodism", "transpiration", "osmosis"], 2],
-  //   ["The special hygroscopic tissue found in the aerial roots of some epiphytic plants is <span class=\"tag\">July '22</span>", ["velamen", "xylem", "endodermis", "epiblema"], 0],
-  //   ["Identify the INCORRECT statement. <span class=\"tag\">Mar '23</span>", ["In a flaccid cell, T.P. is zero", "In a turgid cell, DPD is zero", "In a fully turgid cell, TP = OP", "Water potential of pure water is negative"], 3],
-  //   ["Plants absorb _____ water. <span class=\"tag\">July '23</span>", ["gravitational", "capillary", "combined", "hygroscopic"], 1],
-  //   ["Value of root pressure is +1 to +2 bars which is enough to pump water to a height of <span class=\"tag\">July '24</span>", ["50-60 meters", "10-20 meters", "30-40 meters", "20-30 meters"], 1],
-  //   ["The small pores present on woody stem surface with bark and which carry out gaseous exchange are <span class=\"tag\">Feb '25</span>", ["stomata", "hydathode", "ventricle", "lenticels"], 3],
-  //   ["In plants, soluble food is always translocated in the form of <span class=\"tag\">Feb '26</span>", ["glucose", "starch", "sucrose", "fructose"], 2]
-  // ]],
-  // ["07. Plant Growth and Mineral Nutrition", [
-  //   ["A genetically dwarf pea plant can be converted into a tall pea plant by the use of <span class=\"tag\">Mar '08</span>", ["Cytokinins", "Auxins", "Abscissic acid", "Gibberellic acid"], 3],
-  //   ["Bakane disease in Rice is associated with the discovery of <span class=\"tag\">Mar '09</span>", ["Cytokinins", "Gibberellins", "Auxins", "Ethylene"], 1],
-  //   ["ABA is also known as <span class=\"tag\">Mar '09</span>", ["Anti-toxin", "Anti-virulent", "Anti-oxidants", "Anti-gibberellins"], 3],
-  //   ["2-4-Dichlorophenoxyacetic acid is a <span class=\"tag\">Sep '09</span>", ["Insecticide", "Herbicide", "Flowering hormone", "Rooting hormone"], 1],
-  //   ["Growth rate is maximum during <span class=\"tag\">Mar '10</span>", ["lag phase", "log phase", "senescence phase", "growth phase"], 1],
-  //   ["_____ hormone responsible for efflux of K+ ions from guard cells and act as antitranspirant. <span class=\"tag\">Mar '22</span>", ["Gibberellins", "Cytokinin", "Ethylene", "Abscisic acid"], 3],
-  //   ["Which of the following is the only gaseous plant growth regulator? <span class=\"tag\">Mar '23</span>", ["ABA", "Cytokinin", "Ethylene", "Gibberellin"], 2],
-  //   ["The primary precursor of Indole-3 Acetic acid is <span class=\"tag\">July '23</span>", ["Tryptophan", "Phenyl alanine", "Mevalonic acid", "Methionine"], 0],
-  //   ["Identify the growth hormone in plants which causes inhibitory effect. <span class=\"tag\">Mar '24</span>", ["Cytokinins", "Abscisic acid", "Gibberellin", "Ethylene"], 1],
-  //   ["In a plant, deficiency symptom called 'Die-back of shoots' was observed. This can be rectified by this element- <span class=\"tag\">Feb '25</span>", ["zinc", "sulphur", "iron", "copper"], 3],
-  //   ["A cell divides mitotically into two. Daughter cells divide and redivide repeatedly. Such growth is called <span class=\"tag\">Feb '26</span>", ["arithmetic growth", "geometric growth", "growth ratio", "qualitative growth"], 1]
-  // ]],
-  // ["08. Respiration and Circulation", [
-  //   ["Which is the correct order in which the proteins participate in clotting of blood? <span class=\"tag\">Mar '13</span>", ["Prothrombinase → Prothrombin → Thromboplastin → Thrombin", "Thromboplastin → Prothrombinase → Prothrombin → Thrombin", "Prothrombin → Thromboplastin → Thrombin → Prothrombinase", "Thrombin → Prothrombin → Thromboplastin → Prothrombinase"], 1],
-  //   ["Normal activities of the heart are regulated by <span class=\"tag\">Mar '15</span>", ["brain", "spinal cord", "modified cardiac muscles", "hormones"], 2],
-  //   ["Deposition of fatty substances in the lining of arteries results in <span class=\"tag\">Mar '16</span>", ["arteriosclerosis", "atherosclerosis", "hyperglycemia", "hypotension"], 1],
-  //   ["While playing cricket Raju faces problem of severe pain and heaviness in the chest. Pain spreads from neck, lower jaw, left arm to left shoulder. Identify disease. <span class=\"tag\">Mar '22</span>", ["Angina pectoris", "Typhoid", "Malaria", "Kidney failure"], 0],
-  //   ["In Hamburger's phenomenon, <span class=\"tag\">Mar '23</span>", ["Cl⁻ diffuse into WBCs", "Cl⁻ diffuse into RBCs", "Na⁺ diffuse into RBCs", "Na⁺ diffuse into WBCs"], 1],
-  //   ["Cardiac output of a person is 5400 ml and heart rate 72 per min. What will be his stroke volume? <span class=\"tag\">July '23</span>", ["65 ml", "74 ml", "75 ml", "78 ml"], 2],
-  //   ["Which of the following divides nasal cavity? <span class=\"tag\">Mar '24</span>", ["Hyaline cartilage", "Mesethmoid cartilage", "Ligamentum arteriosum", "Laryngopharynx"], 1],
-  //   ["_____ cellular fragments are formed from megakaryocytes. <span class=\"tag\">July '24</span>", ["Erythrocytes", "Leucocytes", "Thrombocytes", "Monocytes"], 2],
-  //   ["Which is the largest WBC among the following? <span class=\"tag\">Feb '26</span>", ["Eosinophil", "Monocyte", "Basophil", "Lymphocyte"], 1]
-  // ]],
+  ["05. Origin and Evolution", [
+    ["The phenomenon of industrial melanism demonstrates <span class=\"tag\">Oct '13</span>", ["natural selection", "induced mutations", "reproductive isolation", "geographical isolation"], 0],
+    ["The most common types of fossils are <span class=\"tag\">Mar '14</span>", ["moulds", "casts", "actual remains", "models"], 2],
+    ["Identify the type of isolation where the members of two populations have different mating behaviour which prevents interbreeding: <span class=\"tag\">Oct '14</span>", ["Seasonal isolation", "Ethological isolation", "Mechanical isolation", "Habitat isolation"], 1],
+    ["Which of the following is NOT an example of connecting link? <span class=\"tag\">Mar '15</span>", ["Archaeopteryx", "Ichthyostega", "Seymouria", "Biston betularia"], 3],
+    ["The connecting link between 'ape' and 'man' is <span class=\"tag\">Oct '15</span>", ["Dryopithecus", "Australopithecus", "Homo erectus", "Homo neanderthalensis"], 1],
+    ["Vermiform appendix is an example of _____ organ. <span class=\"tag\">July '16</span>", ["vestigial", "homologous", "sense", "analogous"], 0],
+    ["Overproduction is the principle of <span class=\"tag\">July '17</span>", ["Lamarckism", "Theory of organic evolution", "Panspermia theory", "Modern theory of evolution"], 1],
+    ["Transfer of gene between populations that differ genetically from one another is called <span class=\"tag\">Mar '18</span>", ["Gene mutation", "Gene flow", "Genetic drift", "Genetic recombination"], 1],
+    ["The origin of life on the earth is known as <span class=\"tag\">July '18</span>", ["autobiogenesis", "abiogenesis", "protobiogenesis", "organogenesis"], 2],
+    ["_____ represents connecting link between amphibians and reptiles. <span class=\"tag\">Mar '20</span>", ["Seymouria", "Archaeopteris", "Ichthyostegia", "Archaeopteryx"], 0],
+    ["Which event is represented by chromosomal aberrations (Reference: Inversion diagram)? <span class=\"tag\">Mar '22</span>", ["Deletion", "Duplication", "Inversion", "Translation"], 2],
+    ["Due to specific mating behaviour, the members of population do not mate in _____ type of isolation. <span class=\"tag\">July '22</span>", ["ecological", "seasonal", "ethological", "mechanical"], 2],
+    ["If members of two populations have differences in the structure of reproductive organs, then this type of isolation is called <span class=\"tag\">July '23</span>", ["ethological", "seasonal", "mechanical", "habitat"], 2],
+    ["Industrial melanism is one of the best examples of <span class=\"tag\">July '24</span>", ["geographical isolation", "natural selection", "reproductive isolation", "adaptive radiation"], 1],
+    ["In a bird population of newly formed volcanic island, a rare allele of a gene was noted to be much more prevalent than mainland. This is known as _____ effect <span class=\"tag\">Feb '25</span>", ["Founder", "Bohr", "Bottleneck", "Haldane"], 0],
+    ["Connecting link between amphibians and reptiles is <span class=\"tag\">July '25</span>", ["Archaeopteryx", "Australopithecus", "Seymouria", "Ichthyosaurus"], 2],
+    ["The cranial capacity of Neanderthal-man was _____ c.c. <span class=\"tag\">Feb '26</span>", ["650", "900", "1400", "1450"], 2]
+  ]],
+  ["06. Plant Water Relation", [
+    ["Cohesion theory of ascent of sap is based on <span class=\"tag\">Mar '09</span>", ["diameter of vessels", "physical forces between water molecules", "surface tension", "pressure of water in roots"], 1],
+    ["In fully opened stomata, guard cells are <span class=\"tag\">Mar '09</span>", ["Plasmolysed", "Shrunken", "Turgid", "Flaccid"], 2],
+    ["Plasmolysis occurs in a plant cell when the outer solution is <span class=\"tag\">Mar '10</span>", ["isotonic", "hypertonic", "hypotonic", "mesotonic"], 1],
+    ["Wilting in plant occurs due to increase in <span class=\"tag\">Mar '10</span>", ["photosynthesis", "photoperiodism", "transpiration", "osmosis"], 2],
+    ["The special hygroscopic tissue found in the aerial roots of some epiphytic plants is <span class=\"tag\">July '22</span>", ["velamen", "xylem", "endodermis", "epiblema"], 0],
+    ["Identify the INCORRECT statement. <span class=\"tag\">Mar '23</span>", ["In a flaccid cell, T.P. is zero", "In a turgid cell, DPD is zero", "In a fully turgid cell, TP = OP", "Water potential of pure water is negative"], 3],
+    ["Plants absorb _____ water. <span class=\"tag\">July '23</span>", ["gravitational", "capillary", "combined", "hygroscopic"], 1],
+    ["Value of root pressure is +1 to +2 bars which is enough to pump water to a height of <span class=\"tag\">July '24</span>", ["50-60 meters", "10-20 meters", "30-40 meters", "20-30 meters"], 1],
+    ["The small pores present on woody stem surface with bark and which carry out gaseous exchange are <span class=\"tag\">Feb '25</span>", ["stomata", "hydathode", "ventricle", "lenticels"], 3],
+    ["In plants, soluble food is always translocated in the form of <span class=\"tag\">Feb '26</span>", ["glucose", "starch", "sucrose", "fructose"], 2]
+  ]],
+  ["07. Plant Growth and Mineral Nutrition", [
+    ["A genetically dwarf pea plant can be converted into a tall pea plant by the use of <span class=\"tag\">Mar '08</span>", ["Cytokinins", "Auxins", "Abscissic acid", "Gibberellic acid"], 3],
+    ["Bakane disease in Rice is associated with the discovery of <span class=\"tag\">Mar '09</span>", ["Cytokinins", "Gibberellins", "Auxins", "Ethylene"], 1],
+    ["ABA is also known as <span class=\"tag\">Mar '09</span>", ["Anti-toxin", "Anti-virulent", "Anti-oxidants", "Anti-gibberellins"], 3],
+    ["2-4-Dichlorophenoxyacetic acid is a <span class=\"tag\">Sep '09</span>", ["Insecticide", "Herbicide", "Flowering hormone", "Rooting hormone"], 1],
+    ["Growth rate is maximum during <span class=\"tag\">Mar '10</span>", ["lag phase", "log phase", "senescence phase", "growth phase"], 1],
+    ["_____ hormone responsible for efflux of K+ ions from guard cells and act as antitranspirant. <span class=\"tag\">Mar '22</span>", ["Gibberellins", "Cytokinin", "Ethylene", "Abscisic acid"], 3],
+    ["Which of the following is the only gaseous plant growth regulator? <span class=\"tag\">Mar '23</span>", ["ABA", "Cytokinin", "Ethylene", "Gibberellin"], 2],
+    ["The primary precursor of Indole-3 Acetic acid is <span class=\"tag\">July '23</span>", ["Tryptophan", "Phenyl alanine", "Mevalonic acid", "Methionine"], 0],
+    ["Identify the growth hormone in plants which causes inhibitory effect. <span class=\"tag\">Mar '24</span>", ["Cytokinins", "Abscisic acid", "Gibberellin", "Ethylene"], 1],
+    ["In a plant, deficiency symptom called 'Die-back of shoots' was observed. This can be rectified by this element- <span class=\"tag\">Feb '25</span>", ["zinc", "sulphur", "iron", "copper"], 3],
+    ["A cell divides mitotically into two. Daughter cells divide and redivide repeatedly. Such growth is called <span class=\"tag\">Feb '26</span>", ["arithmetic growth", "geometric growth", "growth ratio", "qualitative growth"], 1]
+  ]],
+  ["08. Respiration and Circulation", [
+    ["Which is the correct order in which the proteins participate in clotting of blood? <span class=\"tag\">Mar '13</span>", ["Prothrombinase → Prothrombin → Thromboplastin → Thrombin", "Thromboplastin → Prothrombinase → Prothrombin → Thrombin", "Prothrombin → Thromboplastin → Thrombin → Prothrombinase", "Thrombin → Prothrombin → Thromboplastin → Prothrombinase"], 1],
+    ["Normal activities of the heart are regulated by <span class=\"tag\">Mar '15</span>", ["brain", "spinal cord", "modified cardiac muscles", "hormones"], 2],
+    ["Deposition of fatty substances in the lining of arteries results in <span class=\"tag\">Mar '16</span>", ["arteriosclerosis", "atherosclerosis", "hyperglycemia", "hypotension"], 1],
+    ["While playing cricket Raju faces problem of severe pain and heaviness in the chest. Pain spreads from neck, lower jaw, left arm to left shoulder. Identify disease. <span class=\"tag\">Mar '22</span>", ["Angina pectoris", "Typhoid", "Malaria", "Kidney failure"], 0],
+    ["In Hamburger's phenomenon, <span class=\"tag\">Mar '23</span>", ["Cl⁻ diffuse into WBCs", "Cl⁻ diffuse into RBCs", "Na⁺ diffuse into RBCs", "Na⁺ diffuse into WBCs"], 1],
+    ["Cardiac output of a person is 5400 ml and heart rate 72 per min. What will be his stroke volume? <span class=\"tag\">July '23</span>", ["65 ml", "74 ml", "75 ml", "78 ml"], 2],
+    ["Which of the following divides nasal cavity? <span class=\"tag\">Mar '24</span>", ["Hyaline cartilage", "Mesethmoid cartilage", "Ligamentum arteriosum", "Laryngopharynx"], 1],
+    ["_____ cellular fragments are formed from megakaryocytes. <span class=\"tag\">July '24</span>", ["Erythrocytes", "Leucocytes", "Thrombocytes", "Monocytes"], 2],
+    ["Which is the largest WBC among the following? <span class=\"tag\">Feb '26</span>", ["Eosinophil", "Monocyte", "Basophil", "Lymphocyte"], 1]
+  ]],
   ["09. Control and Coordination", [
     ["The nervous band connecting two cerebral hemisphere is <span class=\"tag\">Oct '09</span>", ["Cerebral peduncle", "Brain stem", "Vermis", "Corpus callosum"], 3],
     ["Damage to which endocrine gland may result in water and electrolyte imbalance? <span class=\"tag\">Mar '13</span>", ["Thymus gland", "Thyroid gland", "Adrenal gland", "Parathyroid gland"], 2],
